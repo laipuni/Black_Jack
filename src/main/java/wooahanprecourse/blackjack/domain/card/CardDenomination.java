@@ -5,20 +5,19 @@ import java.util.List;
 
 public enum CardDenomination {
 
-    A(1,"A"),
-    ONE(1,"1"),
-    TWO(1,"2"),
-    THREE(1,"3"),
-    FOUR(1,"4"),
-    FIVE(1,"5"),
-    SIX(1,"6"),
-    SEVEN(1,"7"),
-    EIGHT(1,"8"),
-    NINE(1,"9"),
-    TEN(1,"10"),
-    KING(1,"k"),
-    QUEEN(1,"q"),
-    JACK(1,"j");
+    A(10,"A"),
+    TWO(2,"2"),
+    THREE(3,"3"),
+    FOUR(4,"4"),
+    FIVE(5,"5"),
+    SIX(6,"6"),
+    SEVEN(7,"7"),
+    EIGHT(8,"8"),
+    NINE(9,"9"),
+    TEN(10,"10"),
+    KING(10,"k"),
+    QUEEN(10,"q"),
+    JACK(10,"j");
 
     private int point;
     private String name;

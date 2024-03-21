@@ -1,8 +1,10 @@
 package wooahanprecourse.blackjack.domain.card;
 
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CardDeckTest {
@@ -11,27 +13,23 @@ class CardDeckTest {
     @Test
     void creatDeck(){
         //given
+        CardDeck deck = new CardDeck();
 
-
-        //when
-
-
-        //then
-
-
+        //when//then
+        assertThat(deck.getSize()).isEqualTo(52);
     }
 
     @DisplayName("덱에서 카드 한장을 뽑는다.")
     @Test
     void draw(){
         //given
-
+        CardDeck deck = new CardDeck();
 
         //when
-
+        Card card = deck.draw();
 
         //then
-
+        assertThat(card).isInstanceOf(Card.class);
 
     }
 }
