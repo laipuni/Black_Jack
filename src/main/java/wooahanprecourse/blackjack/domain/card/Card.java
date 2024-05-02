@@ -10,4 +10,12 @@ public class Card {
         this.denomination = denomination;
     }
 
+    public int getPoint(){
+        return denomination.getPoint();
+    }
+
+    @Override
+    public String toString() {
+        return pattern.name() + denomination.name();
+    }
 }

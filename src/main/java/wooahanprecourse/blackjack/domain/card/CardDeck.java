@@ -8,25 +8,24 @@ public class CardDeck {
 
     private Stack<Card> deck;
 
-    public CardDeck() {
-        deck = createDeck();
-        cardShuffle();
+    private CardDeck(Stack<Card> deck) {
+        this.deck = deck;
     }
 
-    private void cardShuffle() {
+    public static CardDeck createDeck(){
+        Stack<Card> deck = createDeckBy();
         Collections.shuffle(deck);
+        return new CardDeck(deck);
     }
 
-    private Stack<Card> createDeck(){
-        Stack<Card> deck = new Stack<>();
+    private static Stack<Card> createDeckBy() {
+        Stack<Card> cardStack = new Stack<>();
         List<CardPattern> patters = CardPattern.getValues();
         List<CardDenomination> denominations = CardDenomination.getValues();
-
         for (CardPattern pattern : patters) {
-            deck.addAll(createCards(pattern, denominations));
+            cardStack.addAll(createCards(pattern, denominations));
         }
-
-        return deck;
+        return cardStack;
     }
 
     private static Stack<Card> createCards(CardPattern pattern, List<CardDenomination> denominations) {
@@ -34,7 +33,6 @@ public class CardDeck {
         for (CardDenomination denomination : denominations) {
             deck.push(new Card(pattern,denomination));
         }
-
         return deck;
     }
 

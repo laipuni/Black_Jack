@@ -13,7 +13,7 @@ class CardDeckTest {
     @Test
     void creatDeck(){
         //given
-        CardDeck deck = new CardDeck();
+        CardDeck deck = CardDeck.createDeck();
 
         //when//then
         assertThat(deck.getSize()).isEqualTo(52);
@@ -23,7 +23,7 @@ class CardDeckTest {
     @Test
     void draw(){
         //given
-        CardDeck deck = new CardDeck();
+        CardDeck deck = CardDeck.createDeck();
 
         //when
         Card card = deck.draw();

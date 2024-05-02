@@ -5,7 +5,7 @@ import java.util.List;
 
 public enum CardDenomination {
 
-    A(10,"A"),
+    A(11,"A"),
     TWO(2,"2"),
     THREE(3,"3"),
     FOUR(4,"4"),
@@ -30,4 +30,9 @@ public enum CardDenomination {
     public static List<CardDenomination> getValues(){
         return Arrays.asList(CardDenomination.values());
     }
+
+    public int getPoint(){
+        return point;
+    }
+
 }
