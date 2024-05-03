@@ -20,7 +20,6 @@ public class ParticipantName {
         verifyNull(name);
         verifyBlankName(name);
         verifyBlank(name);
-        verifySameDealerNameBy(name);
         verifyNameLength(name);
     }
 
@@ -30,11 +29,6 @@ public class ParticipantName {
         }
     }
 
-    private void verifySameDealerNameBy(String name){
-        if("딜러".equals(name)){
-            throw new IllegalArgumentException("딜러와 같은이름을 가질 수 없습니다.");
-        }
-    }
 
     private void verifyNameLength(String name){
         int length = name.length();

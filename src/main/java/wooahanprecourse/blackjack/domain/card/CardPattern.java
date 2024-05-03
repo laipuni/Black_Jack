@@ -18,4 +18,8 @@ public enum CardPattern {
     public static List<CardPattern> getValues(){
         return Arrays.asList(CardPattern.values());
     }
+
+    public String getDescription() {
+        return description;
+    }
 }

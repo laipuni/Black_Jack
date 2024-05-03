@@ -1,4 +1,4 @@
-package wooahanprecourse.blackjack.domain.view;
+package wooahanprecourse.blackjack.view;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,7 +24,7 @@ public class InputView {
         try {
             return reader.readLine();
         } catch (IOException e) {
-            throw new IllegalArgumentException("잘못된 입력을 받으셨습니다.",e);
+            throw new IllegalArgumentException("잘못된 입력입니다.",e);
         }
     }
 

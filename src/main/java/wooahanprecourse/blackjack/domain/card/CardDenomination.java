@@ -35,4 +35,7 @@ public enum CardDenomination {
         return point;
     }
 
+    public String getName() {
+        return name;
+    }
 }

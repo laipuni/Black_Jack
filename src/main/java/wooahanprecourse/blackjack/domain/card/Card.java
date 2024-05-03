@@ -16,6 +16,6 @@ public class Card {
 
     @Override
     public String toString() {
-        return pattern.name() + denomination.name();
+        return denomination.getName() + pattern.getDescription();
     }
 }

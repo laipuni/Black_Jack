@@ -1,10 +1,7 @@
 package wooahanprecourse.blackjack;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import wooahanprecourse.blackjack.domain.BlackJackGame;
 
-import java.io.IOException;
+import wooahanprecourse.blackjack.game.BlackJackGame;
 
 public class BlackjackApplication {
 
