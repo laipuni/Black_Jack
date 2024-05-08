@@ -1,9 +1,9 @@
-package wooahanprecourse.blackjack.domain.participant;
+package wooahanprecourse.blackjack.domain.card;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-public enum ReceiveSelection {
+public enum CardReceiveSelection {
     YES("y",true),
     NO("n",false);
 
@@ -13,12 +13,12 @@ public enum ReceiveSelection {
 
     private static HashMap<String, Boolean> createSelectionMap() {
         return new HashMap<>(
-                Arrays.stream(ReceiveSelection.values())
-                        .collect(Collectors.toMap(ReceiveSelection::getAnswer, ReceiveSelection::getValue))
+                Arrays.stream(CardReceiveSelection.values())
+                        .collect(Collectors.toMap(CardReceiveSelection::getAnswer, CardReceiveSelection::getValue))
         );
     }
 
-    ReceiveSelection(final String answer, final boolean value) {
+    CardReceiveSelection(final String answer, final boolean value) {
         this.answer = answer;
         this.value = value;
     }
